@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ro" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Orar CR1.3 • Calculatoare Română (Anul I)</title>
+  <meta name="description" content="Университетское расписание занятий: Calculatoare română - Anul I, Grupa CR1.3 (Subgrupa A / B)" />
+
+  <!-- PWA & Mobile Meta Tags -->
+  <meta name="theme-color" content="#090d16" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Orar CR1.3" />
+
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+  <link rel="apple-touch-icon" href="./icon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="header-top">
+        <div class="brand-group">
+          <div class="group-title-row">
+            <span class="group-pill" id="groupPill">CR1.3A</span>
+            <h1 class="group-subtitle">Calculatoare română <span class="dot-sep">•</span> Anul I</h1>
+          </div>
+          <div class="date-clock-row">
+            <p class="current-date-text" id="currentDateText">Загрузка даты...</p>
+            <span class="dot-sep">•</span>
+            <span class="live-clock" id="liveClock" title="Текущее время">--:--</span>
+          </div>
+        </div>
+
+        <button type="button" class="today-btn" id="todayBtn" title="Вернуться к сегодняшнему дню и текущей неделе">
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+            <circle cx="12" cy="15" r="2" fill="currentColor"></circle>
+          </svg>
+          <span>Сегодня</span>
+        </button>
+      </div>
+
+      <!-- Interactive Academic Week Navigator -->
+      <div class="week-navigator" aria-label="Навигация по учебным неделям">
+        <button type="button" class="week-nav-btn" id="prevWeekBtn" title="Предыдущая неделя" aria-label="Предыдущая неделя">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <button type="button" class="week-center-badge" id="currentWeekBadge" title="Нажмите, чтобы быстро переключить Чётную / Нечётную неделю">
+          <div class="week-badge-main">
+            <span class="status-dot"></span>
+            <span id="currentWeekBadgeText">Săptămâna — • —</span>
+            <span class="current-week-pill" id="currentWeekNowTag" hidden>текущая</span>
+          </div>
+          <span class="week-date-range" id="weekDateRangeText">—</span>
+        </button>
+
+        <button type="button" class="week-nav-btn" id="nextWeekBtn" title="Следующая неделя" aria-label="Следующая неделя">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Subgroup Switcher (Subgrupa A / Subgrupa B) -->
+      <div class="subgroup-switcher" role="tablist" aria-label="Выбор подгруппы">
+        <button
+          type="button"
+          role="tab"
+          class="subgroup-tab active"
+          id="tabSubgroupA"
+          data-subgroup="A"
+          aria-selected="true"
+        >
+          <span class="subgroup-tab-title">Subgrupa A</span>
+          <span class="subgroup-tab-sub">Подгруппа A</span>
+        </button>
+        <button
+          type="button"
+          role="tab"
+          class="subgroup-tab"
+          id="tabSubgroupB"
+          data-subgroup="B"
+          aria-selected="false"
+        >
+          <span class="subgroup-tab-title">Subgrupa B</span>
+          <span class="subgroup-tab-sub">Подгруппа B</span>
+        </button>
+      </div>
+
+      <!-- Day Selector Buttons -->
+      <nav class="day-nav" id="dayNav" aria-label="Дни недели">
+        <!-- Populated by script.js -->
+      </nav>
+    </header>
+
+    <!-- Weekend / Preview Notice Banner -->
+    <div class="context-banner" id="contextBanner" hidden>
+      <span class="context-banner-icon" id="contextBannerIcon">ℹ️</span>
+      <span class="context-banner-text" id="contextBannerText"></span>
+    </div>
+
+    <!-- Main Schedule Content -->
+    <main class="schedule-main">
+      <!-- Day Header Info -->
+      <div class="day-overview" id="dayOverview">
+        <div class="day-overview-left">
+          <h2 class="selected-day-title" id="selectedDayTitle">Luni</h2>
+          <span class="selected-day-sub" id="selectedDaySub">Понедельник</span>
+        </div>
+        <div class="day-overview-right" id="dayStatsBadge">
+          <!-- e.g., 4 пары • 08:00 – 16:00 -->
+        </div>
+      </div>
+
+      <!-- Legend for Class Types -->
+      <div class="type-legend" aria-label="Типы занятий">
+        <span class="legend-item legend-curs"><i class="legend-dot"></i>Curs (Лекция)</span>
+        <span class="legend-item legend-seminar"><i class="legend-dot"></i>Seminar (Семинар)</span>
+        <span class="legend-item legend-lab"><i class="legend-dot"></i>Laborator (Лаб.)</span>
+      </div>
+
+      <!-- Cards List -->
+      <section class="cards-container" id="cardsContainer" aria-live="polite">
+        <!-- Populated by script.js -->
+      </section>
+    </main>
+
+    <!-- Buildings Reference Footer -->
+    <footer class="app-footer">
+      <details class="buildings-Accordion">
+        <summary class="accordion-summary">
+          <div class="summary-left">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Справочник корпусов и аудиторий</span>
+          </div>
+          <svg class="chevron-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </summary>
+        <div class="buildings-list">
+          <div class="building-item">
+            <div class="building-rooms">
+              <span class="room-chip">ACB</span>
+              <span class="room-chip">K201</span>
+              <span class="room-chip">K202</span>
+              <span class="room-chip">K205</span>
+              <span class="room-chip">K206</span>
+              <span class="room-chip">G021</span>
+            </div>
+            <p class="building-desc">Clădirea Facultății de Automatică, Calculatoare și Electronică</p>
+          </div>
+          <div class="building-item">
+            <div class="building-rooms">
+              <span class="room-chip">BB215</span>
+              <span class="room-chip">BB216</span>
+            </div>
+            <p class="building-desc">Clădirea Facultății de Științe (Campus Mecanică)</p>
+          </div>
+          <div class="building-item">
+            <div class="building-rooms">
+              <span class="room-chip">BC08</span>
+              <span class="room-chip">BC15</span>
+            </div>
+            <p class="building-desc">Clădirea Laborator (lângă Căminul 8, Campus Mecanică)</p>
+          </div>
+          <div class="building-item">
+            <div class="building-rooms">
+              <span class="room-chip">0.5</span>
+            </div>
+            <p class="building-desc">Clădirea Facultății de Drept (Campus Mecanică)</p>
+          </div>
+          <div class="building-item">
+            <div class="building-rooms">
+              <span class="room-chip">FEFS</span>
+            </div>
+            <p class="building-desc">Facultatea de Educație Fizică și Sport</p>
+          </div>
+        </div>
+      </details>
+
+      <div class="footer-meta">
+        <span id="footerGroupLabel">Grupa CR1.3 • Subgrupa A</span>
+        <span>•</span>
+        <span>Семестр с 28.09.2026</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

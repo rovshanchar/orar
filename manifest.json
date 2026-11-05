@@ -1,0 +1,20 @@
+{
+  "name": "Orar CR1.3A • Calculatoare Română",
+  "short_name": "Orar CR1.3A",
+  "description": "Расписание занятий: Calculatoare română - Anul I, Grupa CR1.3, Subgrupa A",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#090d16",
+  "theme_color": "#090d16",
+  "lang": "ro-RO",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

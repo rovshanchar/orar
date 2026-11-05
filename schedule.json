@@ -1,0 +1,334 @@
+{
+  "metadata": {
+    "specialization": "Calculatoare română",
+    "year": "Anul I",
+    "group": "CR1.3",
+    "subgroups": ["A", "B"],
+    "defaultSubgroup": "A",
+    "semesterStart": "2026-09-28",
+    "totalWeeks": 14
+  },
+  "buildings": {
+    "ACB": "Clădirea Facultății de Automatică, Calculatoare și Electronică",
+    "K201": "Clădirea Facultății de Automatică, Calculatoare și Electronică",
+    "K202": "Clădirea Facultății de Automatică, Calculatoare și Electronică",
+    "K205": "Clădirea Facultății de Automatică, Calculatoare și Electronică",
+    "K206": "Clădirea Facultății de Automatică, Calculatoare și Electronică",
+    "G021": "Clădirea Facultății de Automatică, Calculatoare și Electronică",
+    "BB215": "Clădirea Facultății de Științe (Campus Mecanică)",
+    "BB216": "Clădirea Facultății de Științe (Campus Mecanică)",
+    "BC08": "Clădirea Laborator (lângă Căminul 8, Campus Mecanică)",
+    "BC15": "Clădirea Laborator (lângă Căminul 8, Campus Mecanică)",
+    "0.5": "Clădirea Facultății de Drept (Campus Mecanică)",
+    "FEFS": "Facultatea de Educație Fizică și Sport"
+  },
+  "days": [
+    {
+      "id": "luni",
+      "dayIndex": 1,
+      "nameRo": "Luni",
+      "nameRu": "Понедельник",
+      "shortRo": "Lun",
+      "classes": [
+        {
+          "slot": "P1",
+          "start": "08:00",
+          "end": "10:00",
+          "subject": "Proiectare logică I",
+          "type": "Curs",
+          "typeRu": "Лекция",
+          "weeks": "all",
+          "subgroup": "all",
+          "room": "Sala ACB",
+          "roomCode": "ACB",
+          "teacher": "prof. Eugen Dumitrașcu"
+        },
+        {
+          "slot": "P2",
+          "start": "10:00",
+          "end": "12:00",
+          "subject": "Programarea Calculatoarelor și Limbaje de Programare",
+          "type": "Curs",
+          "typeRu": "Лекция",
+          "weeks": "all",
+          "subgroup": "all",
+          "room": "Sala ACB",
+          "roomCode": "ACB",
+          "teacher": "prof. Marius Marian"
+        },
+        {
+          "slot": "P3",
+          "start": "12:00",
+          "end": "14:00",
+          "subject": "Algebra liniară și geometrie",
+          "type": "Seminar",
+          "typeRu": "Семинар",
+          "weeks": "all",
+          "subgroup": "all",
+          "room": "Sala K201",
+          "roomCode": "K201",
+          "teacher": "prof. Florian Munteanu"
+        },
+        {
+          "slot": "P4",
+          "start": "14:00",
+          "end": "16:00",
+          "subject": "Fizica I - Elemente Generale",
+          "type": "Curs",
+          "typeRu": "Лекция",
+          "weeks": "all",
+          "subgroup": "all",
+          "room": "Sala K201",
+          "roomCode": "K201",
+          "teacher": "prof. Silviu Săraru"
+        }
+      ]
+    },
+    {
+      "id": "marti",
+      "dayIndex": 2,
+      "nameRo": "Marți",
+      "nameRu": "Вторник",
+      "shortRo": "Mar",
+      "classes": [
+        {
+          "slot": "P1",
+          "start": "08:00",
+          "end": "10:00",
+          "subject": "Algebra liniară și geometrie",
+          "type": "Curs",
+          "typeRu": "Лекция",
+          "weeks": "all",
+          "subgroup": "all",
+          "room": "Sala ACB",
+          "roomCode": "ACB",
+          "teacher": "prof. Florian Munteanu"
+        },
+        {
+          "slot": "P2",
+          "start": "10:00",
+          "end": "12:00",
+          "subject": "Analiza matematică",
+          "note": "Часть 1 (блок 4 часа: P2 + P3)",
+          "type": "Curs",
+          "typeRu": "Лекция",
+          "weeks": "all",
+          "subgroup": "all",
+          "room": "Sala ACB",
+          "roomCode": "ACB",
+          "teacher": "prof. Cristian Vladimirescu"
+        },
+        {
+          "slot": "P3",
+          "start": "12:00",
+          "end": "14:00",
+          "subject": "Analiza matematică",
+          "note": "Часть 2 (блок 4 часа: P2 + P3)",
+          "type": "Curs",
+          "typeRu": "Лекция",
+          "weeks": "all",
+          "subgroup": "all",
+          "room": "Sala ACB",
+          "roomCode": "ACB",
+          "teacher": "prof. Cristian Vladimirescu"
+        },
+        {
+          "slot": "P5",
+          "start": "16:00",
+          "end": "18:00",
+          "subject": "Programarea Calculatoarelor (P.C.)",
+          "type": "Seminar",
+          "typeRu": "Семинар",
+          "weeks": "para",
+          "subgroup": "all",
+          "room": "Sala K205",
+          "roomCode": "K205",
+          "teacher": "prof. A. Vultureanu-Albiși"
+        }
+      ]
+    },
+    {
+      "id": "miercuri",
+      "dayIndex": 3,
+      "nameRo": "Miercuri",
+      "nameRu": "Среда",
+      "shortRo": "Mie",
+      "classes": [
+        {
+          "slot": "P1",
+          "start": "08:00",
+          "end": "10:00",
+          "subject": "Programarea Calculatoarelor și Limbaje de Programare (P.C.L.P.)",
+          "type": "Laborator",
+          "typeRu": "Лабораторная",
+          "weeks": "all",
+          "subgroup": "A",
+          "room": "Sala BB215",
+          "roomCode": "BB215",
+          "teacher": "prof. A. Vultureanu-Albiși"
+        },
+        {
+          "slot": "P2",
+          "start": "10:00",
+          "end": "12:00",
+          "subject": "Programarea Calculatoarelor și Limbaje de Programare (P.C.L.P.)",
+          "type": "Laborator",
+          "typeRu": "Лабораторная",
+          "weeks": "all",
+          "subgroup": "B",
+          "room": "Sala BB215",
+          "roomCode": "BB215",
+          "teacher": "prof. A. Vultureanu-Albiși"
+        },
+        {
+          "slot": "P3",
+          "start": "12:00",
+          "end": "14:00",
+          "subject": "Analiza matematică",
+          "type": "Seminar",
+          "typeRu": "Семинар",
+          "weeks": "all",
+          "subgroup": "all",
+          "room": "Sala BC08",
+          "roomCode": "BC08",
+          "teacher": "prof. Andrei Grecu"
+        },
+        {
+          "slot": "P4",
+          "start": "14:00",
+          "end": "16:00",
+          "subject": "Fizica I - Elemente Generale (F. 1.)",
+          "type": "Seminar",
+          "typeRu": "Семинар",
+          "weeks": "para",
+          "subgroup": "all",
+          "room": "Sala 0.5",
+          "roomCode": "0.5",
+          "teacher": "prof. A. Păuna"
+        }
+      ]
+    },
+    {
+      "id": "joi",
+      "dayIndex": 4,
+      "nameRo": "Joi",
+      "nameRu": "Четверг",
+      "shortRo": "Joi",
+      "classes": [
+        {
+          "slot": "P1",
+          "start": "08:00",
+          "end": "10:00",
+          "subject": "Proiectare logică I (P.L. I)",
+          "type": "Seminar",
+          "typeRu": "Семинар",
+          "weeks": "impara",
+          "subgroup": "all",
+          "room": "Sala 0.5",
+          "roomCode": "0.5",
+          "teacher": "prof. E. Dumitrașcu"
+        },
+        {
+          "slot": "P3",
+          "start": "12:00",
+          "end": "14:00",
+          "subject": "Informatică Aplicată (I.A.)",
+          "type": "Laborator",
+          "typeRu": "Лабораторная",
+          "weeks": "impara",
+          "subgroup": "A",
+          "room": "Sala K202",
+          "roomCode": "K202",
+          "teacher": "prof. A. Vultureanu-Albiși"
+        },
+        {
+          "slot": "P3",
+          "start": "12:00",
+          "end": "14:00",
+          "subject": "Informatică Aplicată (I.A.)",
+          "type": "Laborator",
+          "typeRu": "Лабораторная",
+          "weeks": "para",
+          "subgroup": "B",
+          "room": "Sala K202",
+          "roomCode": "K202",
+          "teacher": "prof. A. Vultureanu-Albiși"
+        },
+        {
+          "slot": "P4",
+          "start": "14:00",
+          "end": "16:00",
+          "subject": "Informatică Aplicată",
+          "type": "Curs",
+          "typeRu": "Лекция",
+          "weeks": "all",
+          "subgroup": "all",
+          "room": "Sala K201",
+          "roomCode": "K201",
+          "teacher": "prof. Ileana Nicolae"
+        }
+      ]
+    },
+    {
+      "id": "vineri",
+      "dayIndex": 5,
+      "nameRo": "Vineri",
+      "nameRu": "Пятница",
+      "shortRo": "Vin",
+      "classes": [
+        {
+          "slot": "P3",
+          "start": "12:00",
+          "end": "14:00",
+          "subject": "Sport",
+          "type": "Seminar",
+          "typeRu": "Семинар",
+          "weeks": "impara",
+          "subgroup": "all",
+          "room": "FEFS",
+          "roomCode": "FEFS",
+          "teacher": "prof. A. Băzăvan"
+        },
+        {
+          "slot": "P4",
+          "start": "14:00",
+          "end": "16:00",
+          "subject": "Limba Engleză",
+          "type": "Seminar",
+          "typeRu": "Семинар",
+          "weeks": "para",
+          "subgroup": "all",
+          "room": "Sala BC15",
+          "roomCode": "BC15",
+          "teacher": "prof. I. Boncea"
+        },
+        {
+          "slot": "P5",
+          "start": "16:00",
+          "end": "18:00",
+          "subject": "Proiectare logică I (P.L. 1)",
+          "type": "Laborator",
+          "typeRu": "Лабораторная",
+          "weeks": "all",
+          "subgroup": "A",
+          "room": "Sala BB216",
+          "roomCode": "BB216",
+          "teacher": "prof. H. Popescu"
+        },
+        {
+          "slot": "P6",
+          "start": "18:00",
+          "end": "20:00",
+          "subject": "Proiectare logică I (P.L. 1)",
+          "type": "Laborator",
+          "typeRu": "Лабораторная",
+          "weeks": "all",
+          "subgroup": "B",
+          "room": "Sala BB216",
+          "roomCode": "BB216",
+          "teacher": "prof. H. Popescu"
+        }
+      ]
+    }
+  ]
+}
