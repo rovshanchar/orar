@@ -9,6 +9,285 @@ const FALLBACK_SCHEDULE = {
     semesterStart: "2026-09-28",
     totalWeeks: 14
   },
+  calendarPeriods: [
+    {
+      id: "w1",
+      type: "study",
+      weekNumber: 1,
+      parity: "impara",
+      startDate: "2026-09-28",
+      endDate: "2026-10-04",
+      labelRo: "Săptămâna 1",
+      shortLabel: "Săpt. 1 (Impară) • 28 сен – 2 окт"
+    },
+    {
+      id: "w2",
+      type: "study",
+      weekNumber: 2,
+      parity: "para",
+      startDate: "2026-10-05",
+      endDate: "2026-10-11",
+      labelRo: "Săptămâna 2",
+      shortLabel: "Săpt. 2 (Pară) • 5–9 окт"
+    },
+    {
+      id: "w3",
+      type: "study",
+      weekNumber: 3,
+      parity: "impara",
+      startDate: "2026-10-12",
+      endDate: "2026-10-18",
+      labelRo: "Săptămâna 3",
+      shortLabel: "Săpt. 3 (Impară) • 12–16 окт"
+    },
+    {
+      id: "w4",
+      type: "study",
+      weekNumber: 4,
+      parity: "para",
+      startDate: "2026-10-19",
+      endDate: "2026-10-25",
+      labelRo: "Săptămâna 4",
+      shortLabel: "Săpt. 4 (Pară) • 19–23 окт"
+    },
+    {
+      id: "w5",
+      type: "study",
+      weekNumber: 5,
+      parity: "impara",
+      startDate: "2026-10-26",
+      endDate: "2026-11-01",
+      labelRo: "Săptămâna 5",
+      shortLabel: "Săpt. 5 (Impară) • 26–30 окт"
+    },
+    {
+      id: "w6",
+      type: "study",
+      weekNumber: 6,
+      parity: "para",
+      startDate: "2026-11-02",
+      endDate: "2026-11-08",
+      labelRo: "Săptămâna 6",
+      shortLabel: "Săpt. 6 (Pară) • 2–6 ноя"
+    },
+    {
+      id: "w7",
+      type: "study",
+      weekNumber: 7,
+      parity: "impara",
+      startDate: "2026-11-09",
+      endDate: "2026-11-15",
+      labelRo: "Săptămâna 7",
+      shortLabel: "Săpt. 7 (Impară) • 9–13 ноя"
+    },
+    {
+      id: "w8",
+      type: "study",
+      weekNumber: 8,
+      parity: "para",
+      startDate: "2026-11-16",
+      endDate: "2026-11-22",
+      labelRo: "Săptămâna 8",
+      shortLabel: "Săpt. 8 (Pară) • 16–20 ноя"
+    },
+    {
+      id: "w9",
+      type: "study",
+      weekNumber: 9,
+      parity: "impara",
+      startDate: "2026-11-23",
+      endDate: "2026-11-29",
+      labelRo: "Săptămâna 9",
+      shortLabel: "Săpt. 9 (Impară) • 23–27 ноя"
+    },
+    {
+      id: "w10",
+      type: "study",
+      weekNumber: 10,
+      parity: "para",
+      startDate: "2026-11-30",
+      endDate: "2026-12-06",
+      labelRo: "Săptămâna 10",
+      shortLabel: "Săpt. 10 (Pară) • 30 ноя – 4 дек 🎉"
+    },
+    {
+      id: "w11",
+      type: "study",
+      weekNumber: 11,
+      parity: "impara",
+      startDate: "2026-12-07",
+      endDate: "2026-12-13",
+      labelRo: "Săptămâna 11",
+      shortLabel: "Săpt. 11 (Impară) • 7–11 дек"
+    },
+    {
+      id: "w12",
+      type: "study",
+      weekNumber: 12,
+      parity: "para",
+      startDate: "2026-12-14",
+      endDate: "2026-12-18",
+      labelRo: "Săptămâna 12",
+      shortLabel: "Săpt. 12 (Pară) • 14–18 дек"
+    },
+    {
+      id: "vacanta_iarna",
+      type: "vacation",
+      icon: "🎄",
+      startDate: "2026-12-19",
+      endDate: "2027-01-03",
+      returnDate: "2027-01-04",
+      returnLabel: "4 января 2027 (Săptămâna 13 • Impară)",
+      labelRo: "Vacanță de iarnă",
+      labelRu: "Зимние каникулы",
+      durationText: "2 недели (19 дек 2026 – 3 янв 2027)",
+      description:
+        "Рождественские и новогодние каникулы. Счёт учебных недель ставится на паузу — после каникул начинается 13-я (нечётная) учебная неделя.",
+      shortLabel: "🎄 Vacanță de iarnă • 19 дек – 3 янв"
+    },
+    {
+      id: "w13",
+      type: "study",
+      weekNumber: 13,
+      parity: "impara",
+      startDate: "2027-01-04",
+      endDate: "2027-01-10",
+      labelRo: "Săptămâna 13",
+      shortLabel: "Săpt. 13 (Impară) • 4–8 янв 🎉"
+    },
+    {
+      id: "w14",
+      type: "study",
+      weekNumber: 14,
+      parity: "para",
+      startDate: "2027-01-11",
+      endDate: "2027-01-17",
+      labelRo: "Săptămâna 14",
+      shortLabel: "Săpt. 14 (Pară) • 11–15 янв (Финал)"
+    },
+    {
+      id: "sesiune_iarna",
+      type: "exams",
+      icon: "📝",
+      startDate: "2027-01-18",
+      endDate: "2027-02-07",
+      labelRo: "Sesiune de examene",
+      labelRu: "Зимняя экзаменационная сессия",
+      durationText: "3 недели (18 янв – 7 фев 2027)",
+      shortLabel: "📝 Sesiune de examene • 18 янв – 7 фев"
+    },
+    {
+      id: "vacanta_intersemestriala",
+      type: "vacation",
+      icon: "❄️",
+      startDate: "2027-02-08",
+      endDate: "2027-02-14",
+      returnDate: "2027-02-15",
+      returnLabel: "15 февраля 2027 (Начало 2-го семестра)",
+      labelRo: "Vacanță intersemestrială",
+      labelRu: "Межсеместровые каникулы",
+      durationText: "1 неделя (8 – 14 фев 2027)",
+      description:
+        "Каникулы после зимней экзаменационной сессии перед стартом 2-го семестра.",
+      shortLabel: "❄️ Vacanță intersemestrială • 8–14 фев"
+    }
+  ],
+  holidays: {
+    "2026-11-30": {
+      nameRo: "Sfântul Andrei",
+      nameRu: "День Святого Андрея Первозванного",
+      dayRo: "Luni"
+    },
+    "2026-12-01": {
+      nameRo: "Ziua Națională a României",
+      nameRu: "Национальный день Румынии",
+      dayRo: "Marți"
+    },
+    "2027-01-06": {
+      nameRo: "Boboteaza",
+      nameRu: "Богоявление / Крещение Господне",
+      dayRo: "Miercuri"
+    },
+    "2027-01-07": {
+      nameRo: "Sfântul Ioan Botezătorul",
+      nameRu: "Собор Иоанна Предтечи",
+      dayRo: "Joi"
+    }
+  },
+  exams: [
+    {
+      id: "exam-pl1",
+      subject: "Proiectare logică I",
+      teacher: "prof. Eugen Dumitrașcu",
+      examType: "Examen",
+      examTypeRu: "Экзамен",
+      date: null,
+      time: null,
+      room: null,
+      roomCode: null,
+      statusText: "Дата уточняется в декабре"
+    },
+    {
+      id: "exam-pclp",
+      subject: "Programarea Calculatoarelor și Limbaje de Programare (P.C.L.P.)",
+      teacher: "prof. Marius Marian",
+      examType: "Examen",
+      examTypeRu: "Экзамен",
+      date: null,
+      time: null,
+      room: null,
+      roomCode: null,
+      statusText: "Дата уточняется в декабре"
+    },
+    {
+      id: "exam-alg",
+      subject: "Algebra liniară și geometrie",
+      teacher: "prof. Florian Munteanu",
+      examType: "Examen",
+      examTypeRu: "Экзамен",
+      date: null,
+      time: null,
+      room: null,
+      roomCode: null,
+      statusText: "Дата уточняется в декабре"
+    },
+    {
+      id: "exam-fiz1",
+      subject: "Fizica I - Elemente Generale",
+      teacher: "prof. Silviu Săraru",
+      examType: "Examen",
+      examTypeRu: "Экзамен",
+      date: null,
+      time: null,
+      room: null,
+      roomCode: null,
+      statusText: "Дата уточняется в декабре"
+    },
+    {
+      id: "exam-am",
+      subject: "Analiza matematică",
+      teacher: "prof. Cristian Vladimirescu",
+      examType: "Examen",
+      examTypeRu: "Экзамен",
+      date: null,
+      time: null,
+      room: null,
+      roomCode: null,
+      statusText: "Дата уточняется в декабре"
+    },
+    {
+      id: "exam-ia",
+      subject: "Informatică Aplicată",
+      teacher: "prof. Ileana Nicolae",
+      examType: "Colocviu / Examen",
+      examTypeRu: "Зачёт / Экзамен",
+      date: null,
+      time: null,
+      room: null,
+      roomCode: null,
+      statusText: "Дата уточняется в декабре"
+    }
+  ],
   buildings: {
     "ACB": "Clădirea Facultății de Automatică, Calculatoare și Electronică",
     "K201": "Clădirea Facultății de Automatică, Calculatoare și Electronică",
@@ -346,10 +625,22 @@ const savedSubgroup = (() => {
 const state = {
   schedule: FALLBACK_SCHEDULE,
   selectedSubgroup: savedSubgroup, // 'A' | 'B'
-  selectedWeekNumber: 6,           // 1, 2, 3, ...
+  selectedPeriodIndex: 5,          // Index into schedule.calendarPeriods (default w6)
+  lastStudyPeriodIndex: 5,         // Remembers last viewed study week when toggling Examene tab
   selectedDayIndex: 1,             // 1 (Luni) .. 5 (Vineri)
-  lastLiveSignature: ""            // Used to detect when a live class/break starts or ends
+  isPickerOpen: false,
+  lastLiveSignature: ""
 };
+
+/**
+ * Formats a local Date object into "YYYY-MM-DD"
+ */
+function toISODateString(dateObj) {
+  const y = dateObj.getFullYear();
+  const m = String(dateObj.getMonth() + 1).padStart(2, "0");
+  const d = String(dateObj.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
 
 /**
  * Parses "YYYY-MM-DD" into local Date object at midnight
@@ -368,95 +659,102 @@ function parseDateUTC(dateStr) {
 }
 
 /**
- * Returns parity info for a given week number (1, 2, 3...)
+ * Returns the array of official 1st-semester calendar periods
  */
-function getWeekInfoByNumber(weekNumber) {
-  const safeWeek = Math.max(1, weekNumber);
-  const parity = safeWeek % 2 === 1 ? "impara" : "para";
+function getPeriods() {
+  return state.schedule?.calendarPeriods || FALLBACK_SCHEDULE.calendarPeriods;
+}
+
+/**
+ * Finds the calendar period index that contains the given Date object.
+ * Clamps to the first period if before 2026-09-28, or last period if after 2027-02-14.
+ */
+function findPeriodIndexForDate(dateObj) {
+  const periods = getPeriods();
+  const iso = toISODateString(dateObj);
+
+  for (let i = 0; i < periods.length; i++) {
+    const p = periods[i];
+    if (iso >= p.startDate && iso <= p.endDate) {
+      return i;
+    }
+  }
+
+  // Note: w12 endDate is 2026-12-18 (Friday), vacanta_iarna starts 2026-12-19 (Saturday)
+  if (iso < periods[0].startDate) return 0;
+  return periods.length - 1;
+}
+
+/**
+ * Determines which periodIndex and dayIndex should be selected by default for a given date.
+ * On Saturday (6) or Sunday (0) of a study week, jumps to the next period (Monday of next week, or vacation/exams).
+ */
+function getDefaultTargetForDate(dateObj) {
+  const periods = getPeriods();
+  const currentIdx = findPeriodIndexForDate(dateObj);
+  const currentPeriod = periods[currentIdx];
+  const jsDay = dateObj.getDay(); // 0 = Sun, 1..5 = Mon..Fri, 6 = Sat
+
+  if (currentPeriod.type === "study" && (jsDay === 6 || jsDay === 0)) {
+    const nextIdx = Math.min(periods.length - 1, currentIdx + 1);
+    return {
+      targetPeriodIndex: nextIdx,
+      targetDayIndex: 1,
+      isWeekendJump: true
+    };
+  }
+
   return {
-    weekNumber: safeWeek,
-    parity,
-    labelRo: parity === "impara" ? "Impară" : "Pară",
-    labelRu: parity === "impara" ? "Нечётная" : "Чётная"
+    targetPeriodIndex: currentIdx,
+    targetDayIndex: jsDay >= 1 && jsDay <= 5 ? jsDay : 1,
+    isWeekendJump: false
   };
 }
 
 /**
- * Calculates academic week info from 2026-09-28 (Week 1, Impară) for a Date object.
+ * Gets the Date object for a specific study period and dayIndex (1=Mon..5=Fri)
  */
-function getAcademicWeekInfo(dateObj) {
-  const startStr = state.schedule?.metadata?.semesterStart || "2026-09-28";
-  const startUTC = parseDateUTC(startStr);
-  const currentUTC = Date.UTC(
-    dateObj.getFullYear(),
-    dateObj.getMonth(),
-    dateObj.getDate()
-  );
-
-  const diffDays = Math.floor((currentUTC - startUTC) / 86400000);
-  const rawWeekNumber = Math.floor(diffDays / 7) + 1;
-  const weekNumber = Math.max(1, rawWeekNumber);
-  return getWeekInfoByNumber(weekNumber);
-}
-
-/**
- * Gets the Date object for a specific weekNumber (1-based) and dayIndex (1=Mon..5=Fri)
- */
-function getDateForWeekAndDay(weekNumber, dayIndex) {
-  const startStr = state.schedule?.metadata?.semesterStart || "2026-09-28";
-  const baseDate = parseLocalMidnight(startStr);
-  const offsetDays = (weekNumber - 1) * 7 + (dayIndex - 1);
-  baseDate.setDate(baseDate.getDate() + offsetDays);
+function getDateForPeriodAndDay(period, dayIndex) {
+  const baseDate = parseLocalMidnight(period.startDate);
+  baseDate.setDate(baseDate.getDate() + (dayIndex - 1));
   return baseDate;
 }
 
 /**
- * Formats date range of a week (Monday – Friday) in Russian short format
+ * Formats date range of a period in Russian short format
  */
-function formatWeekDateRange(weekNumber) {
-  const mon = getDateForWeekAndDay(weekNumber, 1);
-  const fri = getDateForWeekAndDay(weekNumber, 5);
+function formatPeriodDateRange(period) {
+  const start = parseLocalMidnight(period.startDate);
+  // For study weeks, show Monday – Friday range
+  const end =
+    period.type === "study"
+      ? getDateForPeriodAndDay(period, 5)
+      : parseLocalMidnight(period.endDate);
+
   const fmt = new Intl.DateTimeFormat("ru-RU", {
     day: "numeric",
     month: "short"
   });
-  return `${fmt.format(mon)} – ${fmt.format(fri)} ${fri.getFullYear()}`;
+  return `${fmt.format(start)} – ${fmt.format(end)} ${end.getFullYear()}`;
 }
 
 /**
  * Formats DD.MM for day buttons
  */
-function formatDayShortDate(weekNumber, dayIndex) {
-  const d = getDateForWeekAndDay(weekNumber, dayIndex);
+function formatDayShortDate(period, dayIndex) {
+  const d = getDateForPeriodAndDay(period, dayIndex);
   const dd = String(d.getDate()).padStart(2, "0");
   const mm = String(d.getMonth() + 1).padStart(2, "0");
   return `${dd}.${mm}`;
 }
 
 /**
- * Determines which week number and day of the week should be selected by default
- * for a given date. If Saturday (6) or Sunday (0), jumps to Monday of the next week.
+ * Checks if a given Date object falls on an official legal holiday
  */
-function getDefaultTargetForDate(dateObj) {
-  const jsDay = dateObj.getDay(); // 0 = Sun, 1 = Mon, ..., 6 = Sat
-  if (jsDay === 6 || jsDay === 0) {
-    const daysUntilMonday = jsDay === 6 ? 2 : 1;
-    const nextMonday = new Date(dateObj.getTime());
-    nextMonday.setDate(dateObj.getDate() + daysUntilMonday);
-    const nextWeekInfo = getAcademicWeekInfo(nextMonday);
-    return {
-      targetDayIndex: 1,
-      targetWeekNumber: nextWeekInfo.weekNumber,
-      isWeekendJump: true
-    };
-  }
-
-  const currentWeekInfo = getAcademicWeekInfo(dateObj);
-  return {
-    targetDayIndex: jsDay,
-    targetWeekNumber: currentWeekInfo.weekNumber,
-    isWeekendJump: false
-  };
+function getHolidayForDate(dateObj) {
+  const iso = toISODateString(dateObj);
+  const holidays = state.schedule?.holidays || FALLBACK_SCHEDULE.holidays || {};
+  return holidays[iso] || null;
 }
 
 /**
@@ -488,6 +786,18 @@ function formatHoursRu(hours) {
   if (mod10 === 1 && mod100 !== 11) return `${h} час`;
   if (mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) return `${h} часа`;
   return `${h} часов`;
+}
+
+/**
+ * Formats Russian plural for days ("1 день", "2 дня", "5 дней")
+ */
+function formatDaysRu(days) {
+  const d = Math.abs(Math.round(days));
+  const mod10 = d % 10;
+  const mod100 = d % 100;
+  if (mod10 === 1 && mod100 !== 11) return `${d} день`;
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) return `${d} дня`;
+  return `${d} дней`;
 }
 
 /**
@@ -533,17 +843,28 @@ function getClassesForDayWeekSubgroup(dayObj, weekParity, subgroup) {
 
 /**
  * Computes a signature string representing which class or break is currently live.
- * Used so the 1-second tick only triggers a full DOM re-render when a class/break starts or finishes.
  */
 function computeLiveSignature(now) {
-  const realWeekInfo = getAcademicWeekInfo(now);
+  const periods = getPeriods();
+  const realPeriodIdx = findPeriodIndexForDate(now);
+  const selectedPeriod = periods[state.selectedPeriodIndex];
   const actualJsDay = now.getDay();
 
   if (
-    state.selectedWeekNumber !== realWeekInfo.weekNumber ||
+    !selectedPeriod ||
+    selectedPeriod.type !== "study" ||
+    state.selectedPeriodIndex !== realPeriodIdx ||
     state.selectedDayIndex !== actualJsDay
   ) {
-    return "not-today";
+    return `period-${state.selectedPeriodIndex}-not-live`;
+  }
+
+  const selectedDate = getDateForPeriodAndDay(
+    selectedPeriod,
+    state.selectedDayIndex
+  );
+  if (getHolidayForDate(selectedDate)) {
+    return "holiday";
   }
 
   const dayObj = state.schedule.days.find(
@@ -551,10 +872,9 @@ function computeLiveSignature(now) {
   );
   if (!dayObj) return "no-day";
 
-  const selectedWeekInfo = getWeekInfoByNumber(state.selectedWeekNumber);
   const classes = getClassesForDayWeekSubgroup(
     dayObj,
-    selectedWeekInfo.parity,
+    selectedPeriod.parity,
     state.selectedSubgroup
   );
 
@@ -579,13 +899,19 @@ function computeLiveSignature(now) {
 }
 
 /**
- * Updates the header date, interactive week navigator, subgroup tabs, and day buttons
+ * Updates the header, mode tabs, interactive period navigator, dropdown menu, subgroup tabs, and day buttons
  */
 function renderHeaderAndNav() {
   const now = new Date();
-  const realWeekInfo = getAcademicWeekInfo(now);
-  const selectedWeekInfo = getWeekInfoByNumber(state.selectedWeekNumber);
+  const periods = getPeriods();
+  const realPeriodIdx = findPeriodIndexForDate(now);
+  const realPeriod = periods[realPeriodIdx];
+  const selectedPeriod = periods[state.selectedPeriodIndex];
   const defaultTarget = getDefaultTargetForDate(now);
+
+  if (selectedPeriod.type === "study") {
+    state.lastStudyPeriodIndex = state.selectedPeriodIndex;
+  }
 
   // Group Pill & Footer Subgroup label
   const groupPill = document.getElementById("groupPill");
@@ -604,44 +930,105 @@ function renderHeaderAndNav() {
     currentDateText.textContent = formatHeaderDate(now);
   }
 
-  // Interactive Week Navigator
+  // Mode Switcher Tabs (Schedule vs Exams)
+  const tabModeSchedule = document.getElementById("tabModeSchedule");
+  const tabModeExams = document.getElementById("tabModeExams");
+  const isExamsMode = selectedPeriod.type === "exams";
+  if (tabModeSchedule && tabModeExams) {
+    tabModeSchedule.classList.toggle("active", !isExamsMode);
+    tabModeSchedule.setAttribute("aria-selected", String(!isExamsMode));
+    tabModeExams.classList.toggle("active", isExamsMode);
+    tabModeExams.setAttribute("aria-selected", String(isExamsMode));
+  }
+
+  // Interactive Period Navigator
   const prevWeekBtn = document.getElementById("prevWeekBtn");
+  const nextWeekBtn = document.getElementById("nextWeekBtn");
   const weekBadge = document.getElementById("currentWeekBadge");
   const weekBadgeText = document.getElementById("currentWeekBadgeText");
   const currentWeekNowTag = document.getElementById("currentWeekNowTag");
   const weekDateRangeText = document.getElementById("weekDateRangeText");
 
   if (prevWeekBtn) {
-    prevWeekBtn.disabled = state.selectedWeekNumber <= 1;
+    prevWeekBtn.disabled = state.selectedPeriodIndex <= 0;
+  }
+  if (nextWeekBtn) {
+    nextWeekBtn.disabled = state.selectedPeriodIndex >= periods.length - 1;
   }
 
   if (weekBadge && weekBadgeText) {
-    weekBadge.classList.remove("week-impara", "week-para");
-    weekBadge.classList.add(
-      selectedWeekInfo.parity === "impara" ? "week-impara" : "week-para"
+    weekBadge.classList.remove(
+      "week-impara",
+      "week-para",
+      "week-vacation",
+      "week-exams"
     );
-    weekBadgeText.textContent = `Săptămâna ${selectedWeekInfo.weekNumber} • ${selectedWeekInfo.labelRo} (${selectedWeekInfo.labelRu})`;
+    weekBadge.setAttribute("aria-expanded", String(state.isPickerOpen));
+
+    if (selectedPeriod.type === "study") {
+      const parityRo = selectedPeriod.parity === "impara" ? "Impară" : "Pară";
+      const parityRu =
+        selectedPeriod.parity === "impara" ? "Нечётная" : "Чётная";
+      weekBadge.classList.add(
+        selectedPeriod.parity === "impara" ? "week-impara" : "week-para"
+      );
+      weekBadgeText.textContent = `${selectedPeriod.labelRo} • ${parityRo} (${parityRu})`;
+    } else if (selectedPeriod.type === "vacation") {
+      weekBadge.classList.add("week-vacation");
+      weekBadgeText.textContent = `${selectedPeriod.icon || "🎄"} ${selectedPeriod.labelRo} (${selectedPeriod.labelRu})`;
+    } else {
+      weekBadge.classList.add("week-exams");
+      weekBadgeText.textContent = `📝 ${selectedPeriod.labelRo} (Сессия)`;
+    }
   }
 
   if (currentWeekNowTag) {
-    currentWeekNowTag.hidden =
-      selectedWeekInfo.weekNumber !== realWeekInfo.weekNumber;
+    currentWeekNowTag.hidden = state.selectedPeriodIndex !== realPeriodIdx;
   }
 
   if (weekDateRangeText) {
-    weekDateRangeText.textContent = formatWeekDateRange(
-      selectedWeekInfo.weekNumber
-    );
+    weekDateRangeText.textContent = formatPeriodDateRange(selectedPeriod);
+  }
+
+  // Render Period Picker Dropdown Options
+  const pickerDropdown = document.getElementById("periodPickerDropdown");
+  if (pickerDropdown) {
+    pickerDropdown.hidden = !state.isPickerOpen;
+    pickerDropdown.innerHTML = periods
+      .map((p, idx) => {
+        const isSelected = idx === state.selectedPeriodIndex;
+        const isCurrentNow = idx === realPeriodIdx;
+        const typeClass = `type-${p.type}`;
+        const nowTag = isCurrentNow
+          ? `<span class="period-opt-tag">сейчас</span>`
+          : "";
+        return `
+          <button
+            type="button"
+            role="option"
+            class="period-option ${typeClass} ${isSelected ? "is-selected" : ""}"
+            data-period-index="${idx}"
+            aria-selected="${isSelected}"
+          >
+            <span>${p.shortLabel}</span>
+            ${nowTag}
+          </button>
+        `;
+      })
+      .join("");
   }
 
   // Subgroup Switcher Tabs
+  const subgroupSwitcher = document.getElementById("subgroupSwitcher");
   const tabSubgroupA = document.getElementById("tabSubgroupA");
   const tabSubgroupB = document.getElementById("tabSubgroupB");
+  if (subgroupSwitcher) {
+    subgroupSwitcher.hidden = selectedPeriod.type !== "study";
+  }
   if (tabSubgroupA && tabSubgroupB) {
     const isA = state.selectedSubgroup === "A";
     tabSubgroupA.classList.toggle("active", isA);
     tabSubgroupA.setAttribute("aria-selected", String(isA));
-
     tabSubgroupB.classList.toggle("active", !isA);
     tabSubgroupB.setAttribute("aria-selected", String(!isA));
   }
@@ -650,67 +1037,82 @@ function renderHeaderAndNav() {
   const todayBtn = document.getElementById("todayBtn");
   if (todayBtn) {
     const isAtDefault =
-      state.selectedDayIndex === defaultTarget.targetDayIndex &&
-      state.selectedWeekNumber === defaultTarget.targetWeekNumber;
+      state.selectedPeriodIndex === defaultTarget.targetPeriodIndex &&
+      (selectedPeriod.type !== "study" ||
+        state.selectedDayIndex === defaultTarget.targetDayIndex);
     todayBtn.classList.toggle("is-at-today", isAtDefault);
   }
 
-  // Day Selector Buttons
+  // Day Selector Buttons (only visible during study weeks)
   const dayNav = document.getElementById("dayNav");
-  if (dayNav && state.schedule?.days) {
-    const actualJsDay = now.getDay();
-    dayNav.innerHTML = state.schedule.days
-      .map((day) => {
-        const isActive = day.dayIndex === state.selectedDayIndex;
-        const isToday =
-          day.dayIndex === actualJsDay &&
-          state.selectedWeekNumber === realWeekInfo.weekNumber;
-        const dayClasses = getClassesForDayWeekSubgroup(
-          day,
-          selectedWeekInfo.parity,
-          state.selectedSubgroup
-        );
-        const dotsHtml = dayClasses
-          .map(() => `<span class="day-mini-dot"></span>`)
-          .join("");
-        const shortDate = formatDayShortDate(
-          state.selectedWeekNumber,
-          day.dayIndex
-        );
-
-        return `
-          <button
-            type="button"
-            class="day-btn ${isActive ? "active" : ""} ${isToday ? "is-today" : ""}"
-            data-day-index="${day.dayIndex}"
-            aria-pressed="${isActive}"
-          >
-            <span class="day-btn-ro">${day.nameRo}</span>
-            <span class="day-btn-date">${shortDate}</span>
-            <span class="day-btn-dots" aria-hidden="true">${dotsHtml}</span>
-          </button>
-        `;
-      })
-      .join("");
+  const typeLegend = document.getElementById("typeLegend");
+  if (typeLegend) {
+    typeLegend.hidden = selectedPeriod.type !== "study";
   }
 
-  // Context banner (Weekend notice or viewing another week)
+  if (dayNav) {
+    if (selectedPeriod.type !== "study") {
+      dayNav.hidden = true;
+    } else {
+      dayNav.hidden = false;
+      const actualJsDay = now.getDay();
+      dayNav.innerHTML = state.schedule.days
+        .map((day) => {
+          const isActive = day.dayIndex === state.selectedDayIndex;
+          const isToday =
+            day.dayIndex === actualJsDay &&
+            state.selectedPeriodIndex === realPeriodIdx;
+
+          const dayDateObj = getDateForPeriodAndDay(
+            selectedPeriod,
+            day.dayIndex
+          );
+          const holiday = getHolidayForDate(dayDateObj);
+          const shortDate = formatDayShortDate(selectedPeriod, day.dayIndex);
+
+          const dayClasses = getClassesForDayWeekSubgroup(
+            day,
+            selectedPeriod.parity,
+            state.selectedSubgroup
+          );
+          const dotsHtml = holiday
+            ? `<span>🎉</span>`
+            : dayClasses.map(() => `<span class="day-mini-dot"></span>`).join("");
+
+          return `
+            <button
+              type="button"
+              class="day-btn ${isActive ? "active" : ""} ${isToday ? "is-today" : ""} ${holiday ? "is-holiday" : ""}"
+              data-day-index="${day.dayIndex}"
+              aria-pressed="${isActive}"
+            >
+              <span class="day-btn-ro">${day.nameRo}</span>
+              <span class="day-btn-date">${shortDate}</span>
+              <span class="day-btn-dots" aria-hidden="true">${dotsHtml}</span>
+            </button>
+          `;
+        })
+        .join("");
+    }
+  }
+
+  // Context banner
   const contextBanner = document.getElementById("contextBanner");
   const contextBannerIcon = document.getElementById("contextBannerIcon");
   const contextBannerText = document.getElementById("contextBannerText");
   if (contextBanner && contextBannerText && contextBannerIcon) {
     if (
       defaultTarget.isWeekendJump &&
-      state.selectedDayIndex === defaultTarget.targetDayIndex &&
-      state.selectedWeekNumber === defaultTarget.targetWeekNumber
+      state.selectedPeriodIndex === defaultTarget.targetPeriodIndex &&
+      state.selectedDayIndex === defaultTarget.targetDayIndex
     ) {
       contextBanner.hidden = false;
       contextBannerIcon.textContent = "🎉";
-      contextBannerText.textContent = `Сегодня выходной! Автоматически открыт Понедельник следующей недели (Săptămâna ${selectedWeekInfo.weekNumber} • ${selectedWeekInfo.labelRo}).`;
-    } else if (state.selectedWeekNumber !== realWeekInfo.weekNumber) {
+      contextBannerText.textContent = `Сегодня выходной! Автоматически открыт следующий учебный период: ${selectedPeriod.shortLabel}.`;
+    } else if (state.selectedPeriodIndex !== realPeriodIdx) {
       contextBanner.hidden = false;
       contextBannerIcon.textContent = "📅";
-      contextBannerText.textContent = `Просмотр: Неделя ${selectedWeekInfo.weekNumber} (${selectedWeekInfo.labelRo} / ${selectedWeekInfo.labelRu}). Текущая неделя — №${realWeekInfo.weekNumber} (${realWeekInfo.labelRo}).`;
+      contextBannerText.textContent = `Режим просмотра: ${selectedPeriod.shortLabel}. Текущий период по календарю — ${realPeriod.labelRo}.`;
     } else {
       contextBanner.hidden = true;
     }
@@ -718,44 +1120,172 @@ function renderHeaderAndNav() {
 }
 
 /**
- * Renders the schedule cards and break ("окна") banners for the selected day, week, and subgroup
+ * Renders the main content area: Study Day (or Legal Holiday), Vacation Card, or Exam Session Cards
  */
 function renderScheduleCards() {
   const now = new Date();
-  const realWeekInfo = getAcademicWeekInfo(now);
-  const selectedWeekInfo = getWeekInfoByNumber(state.selectedWeekNumber);
-  const actualJsDay = now.getDay();
+  const periods = getPeriods();
+  const realPeriodIdx = findPeriodIndexForDate(now);
+  const selectedPeriod = periods[state.selectedPeriodIndex];
+  const cardsContainer = document.getElementById("cardsContainer");
+  const selectedDayTitle = document.getElementById("selectedDayTitle");
+  const selectedDaySub = document.getElementById("selectedDaySub");
+  const dayStatsBadge = document.getElementById("dayStatsBadge");
 
+  if (!cardsContainer || !selectedPeriod) return;
+
+  // CASE 1: VACATION PERIOD (Vacanță de iarnă / Vacanță intersemestrială)
+  if (selectedPeriod.type === "vacation") {
+    if (selectedDayTitle) selectedDayTitle.textContent = selectedPeriod.labelRo;
+    if (selectedDaySub) selectedDaySub.textContent = selectedPeriod.labelRu;
+    if (dayStatsBadge) dayStatsBadge.textContent = "Каникулы";
+
+    const todayUTC = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+    const startUTC = parseDateUTC(selectedPeriod.startDate);
+    const returnUTC = parseDateUTC(selectedPeriod.returnDate);
+
+    let countdownTitle = "";
+    if (todayUTC < startUTC) {
+      const daysUntilVacation = Math.ceil((startUTC - todayUTC) / 86400000);
+      const totalDaysToReturn = Math.ceil((returnUTC - startUTC) / 86400000);
+      countdownTitle = `До начала каникул: ${formatDaysRu(daysUntilVacation)} (продлятся ${formatDaysRu(totalDaysToReturn)})`;
+    } else if (todayUTC < returnUTC) {
+      const daysLeft = Math.ceil((returnUTC - todayUTC) / 86400000);
+      countdownTitle = `До возвращения на учёбу осталось: ${formatDaysRu(daysLeft)}`;
+    } else {
+      countdownTitle = "Этот период каникул завершён";
+    }
+
+    cardsContainer.innerHTML = `
+      <article class="vacation-card">
+        <div class="vacation-icon">${selectedPeriod.icon || "🎄"}</div>
+        <h3 class="vacation-title">${selectedPeriod.labelRo} • ${selectedPeriod.labelRu}</h3>
+        <span class="vacation-dates-pill">${selectedPeriod.durationText}</span>
+        <p class="vacation-desc">${selectedPeriod.description}</p>
+        <div class="vacation-countdown-box">
+          <span class="vacation-countdown-main">⏳ ${countdownTitle}</span>
+          <span class="vacation-return-sub">Выход на учёбу: ${selectedPeriod.returnLabel}</span>
+        </div>
+      </article>
+    `;
+    state.lastLiveSignature = computeLiveSignature(now);
+    return;
+  }
+
+  // CASE 2: EXAM SESSION (Sesiune de examene)
+  if (selectedPeriod.type === "exams") {
+    if (selectedDayTitle) selectedDayTitle.textContent = "Sesiune de examene";
+    if (selectedDaySub) selectedDaySub.textContent = "18 янв – 7 фев 2027 (3 недели)";
+    const exams = state.schedule?.exams || FALLBACK_SCHEDULE.exams || [];
+    if (dayStatsBadge) dayStatsBadge.textContent = `${exams.length} предметов`;
+
+    const buildingsMap = state.schedule.buildings || {};
+    const examCardsHtml = exams
+      .map((ex, idx) => {
+        const isScheduled = Boolean(ex.date);
+        const statusLabel = isScheduled
+          ? `📅 ${ex.date}${ex.time ? ` • ${ex.time}` : ""}`
+          : `⏳ ${ex.statusText || "Дата уточняется в декабре"}`;
+        const roomLabel = ex.room || "Аудитория уточняется";
+        const buildingHint = ex.roomCode
+          ? buildingsMap[ex.roomCode] || "Universitatea din Craiova"
+          : "Дату, время и кабинет можно легко вписать в schedule.json (раздел exams)";
+
+        return `
+          <article class="exam-card" style="animation-delay: ${idx * 35}ms">
+            <div class="card-top">
+              <span class="exam-status-pill ${isScheduled ? "is-scheduled" : ""}">${statusLabel}</span>
+              <span class="type-badge type-curs">${ex.examType} • ${ex.examTypeRu}</span>
+            </div>
+            <h3 class="subject-title">${ex.subject}</h3>
+            <div class="card-meta">
+              <div class="meta-row">
+                <div class="room-block">
+                  <div class="room-line">
+                    <svg class="room-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span>${roomLabel}</span>
+                  </div>
+                  <span class="building-hint">${buildingHint}</span>
+                </div>
+                <div class="teacher-line">
+                  <svg class="teacher-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span>${ex.teacher}</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        `;
+      })
+      .join("");
+
+    cardsContainer.innerHTML = `
+      <div class="exams-intro-banner">
+        📝 <strong>Зимняя сессия (18 января – 7 февраля 2027)</strong>. Когда в декабре утвердят точные даты экзаменов, просто укажите <code>date</code>, <code>time</code> и <code>room</code> в файле <code>schedule.json</code>.
+      </div>
+      ${examCardsHtml}
+    `;
+    state.lastLiveSignature = computeLiveSignature(now);
+    return;
+  }
+
+  // CASE 3: REGULAR STUDY WEEK (Weeks 1..14)
+  const actualJsDay = now.getDay();
   const isViewingTodayRealWeek =
     state.selectedDayIndex === actualJsDay &&
-    state.selectedWeekNumber === realWeekInfo.weekNumber;
-
-  const currentMinutesFloat =
-    now.getHours() * 60 + now.getMinutes() + now.getSeconds() / 60;
-  const currentSecondsOfDay =
-    now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+    state.selectedPeriodIndex === realPeriodIdx;
 
   const dayObj = state.schedule.days.find(
     (d) => d.dayIndex === state.selectedDayIndex
   );
   if (!dayObj) return;
 
-  const classes = getClassesForDayWeekSubgroup(
-    dayObj,
-    selectedWeekInfo.parity,
-    state.selectedSubgroup
+  const selectedDateObj = getDateForPeriodAndDay(
+    selectedPeriod,
+    dayObj.dayIndex
   );
-
-  // Day Overview Header
-  const selectedDayTitle = document.getElementById("selectedDayTitle");
-  const selectedDaySub = document.getElementById("selectedDaySub");
-  const dayStatsBadge = document.getElementById("dayStatsBadge");
+  const holiday = getHolidayForDate(selectedDateObj);
+  const dayDateStr = formatDayShortDate(selectedPeriod, dayObj.dayIndex);
 
   if (selectedDayTitle) selectedDayTitle.textContent = dayObj.nameRo;
   if (selectedDaySub) {
-    const dayDate = formatDayShortDate(state.selectedWeekNumber, dayObj.dayIndex);
-    selectedDaySub.textContent = `${dayObj.nameRu} (${dayDate}) • Подгруппа ${state.selectedSubgroup}`;
+    selectedDaySub.textContent = `${dayObj.nameRu} (${dayDateStr}) • Подгруппа ${state.selectedSubgroup}`;
   }
+
+  // Check if this specific date is a Legal Holiday (Zi liberă legală)
+  if (holiday) {
+    if (dayStatsBadge) {
+      dayStatsBadge.textContent = "🎉 Выходной день";
+    }
+    const fullDateRu = new Intl.DateTimeFormat("ru-RU", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    }).format(selectedDateObj);
+
+    cardsContainer.innerHTML = `
+      <article class="holiday-card">
+        <div class="holiday-emoji">🎉</div>
+        <span class="holiday-badge">Zi liberă legală • Государственный выходной</span>
+        <h3 class="holiday-title">${holiday.nameRo}</h3>
+        <p class="holiday-subtitle">${holiday.nameRu} (${fullDateRu})</p>
+        <p class="holiday-note">Официальный нерабочий праздничный день в Румынии — регулярные занятия в университете не проводятся.</p>
+      </article>
+    `;
+    state.lastLiveSignature = computeLiveSignature(now);
+    return;
+  }
+
+  const classes = getClassesForDayWeekSubgroup(
+    dayObj,
+    selectedPeriod.parity,
+    state.selectedSubgroup
+  );
 
   if (dayStatsBadge) {
     if (classes.length > 0) {
@@ -767,8 +1297,10 @@ function renderScheduleCards() {
     }
   }
 
-  const cardsContainer = document.getElementById("cardsContainer");
-  if (!cardsContainer) return;
+  const currentMinutesFloat =
+    now.getHours() * 60 + now.getMinutes() + now.getSeconds() / 60;
+  const currentSecondsOfDay =
+    now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
 
   const buildingsMap = state.schedule.buildings || {};
   const fragments = [];
@@ -974,9 +1506,8 @@ function triggerSlide(direction, includeDayStrip = false) {
   }
 
   targets.forEach((el) => {
-    if (!el) return;
+    if (!el || el.hidden) return;
     el.classList.remove("slide-next", "slide-prev");
-    // Force reflow to restart animation cleanly
     void el.offsetWidth;
     el.classList.add(cls);
   });
@@ -984,8 +1515,6 @@ function triggerSlide(direction, includeDayStrip = false) {
 
 /**
  * Full render pass (called only on user interaction or state change)
- * @param {'next'|'prev'|null} slideDir
- * @param {boolean} animateWeekStrip
  */
 function renderAll(slideDir = null, animateWeekStrip = false) {
   renderHeaderAndNav();
@@ -997,95 +1526,172 @@ function renderAll(slideDir = null, animateWeekStrip = false) {
 }
 
 /**
- * Advances sequentially to the next day (or from Friday -> Monday of the next week)
+ * Advances to the next period in the semester calendar:
+ * Select Monday (Luni) when entering a study week.
  */
-function stepDayForward() {
-  if (state.selectedDayIndex < 5) {
-    state.selectedDayIndex += 1;
-    renderAll("next", false);
-  } else {
-    state.selectedWeekNumber += 1;
-    state.selectedDayIndex = 1; // Luni of the next week
+function stepPeriodForward() {
+  const periods = getPeriods();
+  if (state.selectedPeriodIndex < periods.length - 1) {
+    state.selectedPeriodIndex += 1;
+    state.selectedDayIndex = 1; // Luni
+    state.isPickerOpen = false;
     renderAll("next", true);
   }
 }
 
 /**
- * Moves sequentially to the previous day (or from Monday -> Friday of the previous week)
+ * Moves to the previous period in the semester calendar:
+ * Select Friday (Vineri) when entering a study week backwards.
  */
-function stepDayBackward() {
-  if (state.selectedDayIndex > 1) {
-    state.selectedDayIndex -= 1;
-    renderAll("prev", false);
-  } else if (state.selectedWeekNumber > 1) {
-    state.selectedWeekNumber -= 1;
-    state.selectedDayIndex = 5; // Vineri of the previous week
+function stepPeriodBackward() {
+  if (state.selectedPeriodIndex > 0) {
+    state.selectedPeriodIndex -= 1;
+    state.selectedDayIndex = 5; // Vineri
+    state.isPickerOpen = false;
     renderAll("prev", true);
   }
 }
 
 /**
- * Jump to today's actual schedule (or next Monday if today is Sat/Sun)
+ * Advances sequentially by day (or across period boundaries after Friday)
+ */
+function stepDayForward() {
+  const periods = getPeriods();
+  const currentPeriod = periods[state.selectedPeriodIndex];
+  if (currentPeriod.type === "study" && state.selectedDayIndex < 5) {
+    state.selectedDayIndex += 1;
+    renderAll("next", false);
+  } else {
+    stepPeriodForward();
+  }
+}
+
+/**
+ * Moves sequentially backward by day (or across period boundaries before Monday)
+ */
+function stepDayBackward() {
+  const periods = getPeriods();
+  const currentPeriod = periods[state.selectedPeriodIndex];
+  if (currentPeriod.type === "study" && state.selectedDayIndex > 1) {
+    state.selectedDayIndex -= 1;
+    renderAll("prev", false);
+  } else {
+    stepPeriodBackward();
+  }
+}
+
+/**
+ * Jump to today's actual schedule (or next period if today is Sat/Sun)
  */
 function selectTodayDefault() {
   const now = new Date();
   const target = getDefaultTargetForDate(now);
-  const currentLinear = state.selectedWeekNumber * 10 + state.selectedDayIndex;
-  const targetLinear = target.targetWeekNumber * 10 + target.targetDayIndex;
+  const currentLinear = state.selectedPeriodIndex * 10 + state.selectedDayIndex;
+  const targetLinear = target.targetPeriodIndex * 10 + target.targetDayIndex;
   const dir =
     targetLinear > currentLinear
       ? "next"
       : targetLinear < currentLinear
       ? "prev"
       : null;
-  const weekChanged = state.selectedWeekNumber !== target.targetWeekNumber;
+  const periodChanged = state.selectedPeriodIndex !== target.targetPeriodIndex;
 
+  state.selectedPeriodIndex = target.targetPeriodIndex;
   state.selectedDayIndex = target.targetDayIndex;
-  state.selectedWeekNumber = target.targetWeekNumber;
-  renderAll(dir, weekChanged);
+  state.isPickerOpen = false;
+  renderAll(dir, periodChanged);
 }
 
 /**
- * Sets up UI event listeners (buttons, swipes, keyboard arrows)
+ * Sets up UI event listeners (buttons, period picker dropdown, swipes, keyboard arrows)
  */
 function setupEventListeners() {
-  // Interactive Week Navigator buttons:
-  // Prev week (◀) -> Friday (Vineri) of previous week
-  // Next week (▶) -> Monday (Luni) of next week
   const prevWeekBtn = document.getElementById("prevWeekBtn");
   const nextWeekBtn = document.getElementById("nextWeekBtn");
   const currentWeekBadge = document.getElementById("currentWeekBadge");
+  const pickerDropdown = document.getElementById("periodPickerDropdown");
+  const weekNavigatorWrap = document.getElementById("weekNavigatorWrap");
 
   if (prevWeekBtn) {
     prevWeekBtn.addEventListener("click", () => {
-      if (state.selectedWeekNumber > 1) {
-        state.selectedWeekNumber -= 1;
-        state.selectedDayIndex = 5; // Vineri of previous week
-        renderAll("prev", true);
-      }
+      stepPeriodBackward();
     });
   }
 
   if (nextWeekBtn) {
     nextWeekBtn.addEventListener("click", () => {
-      state.selectedWeekNumber += 1;
-      state.selectedDayIndex = 1; // Luni of next week
-      renderAll("next", true);
+      stepPeriodForward();
     });
   }
 
-  // Clicking the center week badge compares the SAME day on the adjacent opposite-parity week
+  // Clicking the center week badge opens/closes the full semester period picker dropdown
   if (currentWeekBadge) {
-    currentWeekBadge.addEventListener("click", () => {
-      const now = new Date();
-      const realWeek = getAcademicWeekInfo(now).weekNumber;
-      if (state.selectedWeekNumber === realWeek) {
-        state.selectedWeekNumber = realWeek + 1;
-        renderAll("next", true);
-      } else {
-        const dir = realWeek > state.selectedWeekNumber ? "next" : "prev";
-        state.selectedWeekNumber = realWeek;
+    currentWeekBadge.addEventListener("click", (e) => {
+      e.stopPropagation();
+      state.isPickerOpen = !state.isPickerOpen;
+      renderHeaderAndNav();
+      if (state.isPickerOpen && pickerDropdown) {
+        const selectedEl = pickerDropdown.querySelector(".is-selected");
+        if (selectedEl) {
+          selectedEl.scrollIntoView({ block: "nearest" });
+        }
+      }
+    });
+  }
+
+  // Selecting a specific week/vacation/session from the dropdown
+  if (pickerDropdown) {
+    pickerDropdown.addEventListener("click", (e) => {
+      const opt = e.target.closest(".period-option");
+      if (!opt) return;
+      const newIdx = Number(opt.getAttribute("data-period-index"));
+      state.isPickerOpen = false;
+      if (!Number.isNaN(newIdx) && newIdx !== state.selectedPeriodIndex) {
+        const dir = newIdx > state.selectedPeriodIndex ? "next" : "prev";
+        state.selectedPeriodIndex = newIdx;
+        state.selectedDayIndex = dir === "next" ? 1 : 5;
         renderAll(dir, true);
+      } else {
+        renderHeaderAndNav();
+      }
+    });
+  }
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      state.isPickerOpen &&
+      weekNavigatorWrap &&
+      !weekNavigatorWrap.contains(e.target)
+    ) {
+      state.isPickerOpen = false;
+      renderHeaderAndNav();
+    }
+  });
+
+  // Top Mode Switcher: Schedule (Weeks 1-14) vs Examene (18 Jan - 7 Feb)
+  const tabModeSchedule = document.getElementById("tabModeSchedule");
+  const tabModeExams = document.getElementById("tabModeExams");
+
+  if (tabModeSchedule) {
+    tabModeSchedule.addEventListener("click", () => {
+      const periods = getPeriods();
+      if (periods[state.selectedPeriodIndex]?.type === "exams") {
+        state.selectedPeriodIndex = state.lastStudyPeriodIndex ?? 5;
+        state.isPickerOpen = false;
+        renderAll("prev", true);
+      }
+    });
+  }
+
+  if (tabModeExams) {
+    tabModeExams.addEventListener("click", () => {
+      const periods = getPeriods();
+      const examsIdx = periods.findIndex((p) => p.type === "exams");
+      if (examsIdx !== -1 && state.selectedPeriodIndex !== examsIdx) {
+        state.selectedPeriodIndex = examsIdx;
+        state.isPickerOpen = false;
+        renderAll("next", true);
       }
     });
   }
@@ -1135,7 +1741,7 @@ function setupEventListeners() {
     });
   }
 
-  // Touch swipe gestures on the schedule area (swipe left -> next day/week, swipe right -> prev day/week)
+  // Touch swipe gestures on the schedule area
   const swipeArea = document.querySelector(".schedule-main");
   if (swipeArea) {
     let touchStartX = 0;
@@ -1158,7 +1764,6 @@ function setupEventListeners() {
         const dx = e.changedTouches[0].clientX - touchStartX;
         const dy = e.changedTouches[0].clientY - touchStartY;
 
-        // Trigger horizontal swipe if horizontal movement > 50px and dominates vertical scroll
         if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.35) {
           if (dx < 0) {
             stepDayForward();
@@ -1171,7 +1776,7 @@ function setupEventListeners() {
     );
   }
 
-  // Optional keyboard left/right arrow navigation on desktop
+  // Keyboard left/right arrow navigation on desktop
   window.addEventListener("keydown", (e) => {
     if (e.target && ["INPUT", "TEXTAREA", "SELECT"].includes(e.target.tagName)) {
       return;
@@ -1180,6 +1785,9 @@ function setupEventListeners() {
       stepDayForward();
     } else if (e.key === "ArrowLeft") {
       stepDayBackward();
+    } else if (e.key === "Escape" && state.isPickerOpen) {
+      state.isPickerOpen = false;
+      renderHeaderAndNav();
     }
   });
 }
@@ -1197,7 +1805,6 @@ async function loadScheduleData() {
       }
     }
   } catch (err) {
-    // Expected when opening index.html directly via file:// protocol
     state.schedule = FALLBACK_SCHEDULE;
   }
 }
@@ -1226,7 +1833,6 @@ async function initApp() {
   selectTodayDefault();
   registerServiceWorker();
 
-  // Lightweight 1-second tick that updates ONLY clock text and live progress without re-rendering cards
   setInterval(tickClockAndLiveTimers, 1000);
 }
 

@@ -8,6 +8,283 @@
     "semesterStart": "2026-09-28",
     "totalWeeks": 14
   },
+  "calendarPeriods": [
+    {
+      "id": "w1",
+      "type": "study",
+      "weekNumber": 1,
+      "parity": "impara",
+      "startDate": "2026-09-28",
+      "endDate": "2026-10-04",
+      "labelRo": "Săptămâna 1",
+      "shortLabel": "Săpt. 1 (Impară) • 28 сен – 2 окт"
+    },
+    {
+      "id": "w2",
+      "type": "study",
+      "weekNumber": 2,
+      "parity": "para",
+      "startDate": "2026-10-05",
+      "endDate": "2026-10-11",
+      "labelRo": "Săptămâna 2",
+      "shortLabel": "Săpt. 2 (Pară) • 5–9 окт"
+    },
+    {
+      "id": "w3",
+      "type": "study",
+      "weekNumber": 3,
+      "parity": "impara",
+      "startDate": "2026-10-12",
+      "endDate": "2026-10-18",
+      "labelRo": "Săptămâna 3",
+      "shortLabel": "Săpt. 3 (Impară) • 12–16 окт"
+    },
+    {
+      "id": "w4",
+      "type": "study",
+      "weekNumber": 4,
+      "parity": "para",
+      "startDate": "2026-10-19",
+      "endDate": "2026-10-25",
+      "labelRo": "Săptămâna 4",
+      "shortLabel": "Săpt. 4 (Pară) • 19–23 окт"
+    },
+    {
+      "id": "w5",
+      "type": "study",
+      "weekNumber": 5,
+      "parity": "impara",
+      "startDate": "2026-10-26",
+      "endDate": "2026-11-01",
+      "labelRo": "Săptămâna 5",
+      "shortLabel": "Săpt. 5 (Impară) • 26–30 окт"
+    },
+    {
+      "id": "w6",
+      "type": "study",
+      "weekNumber": 6,
+      "parity": "para",
+      "startDate": "2026-11-02",
+      "endDate": "2026-11-08",
+      "labelRo": "Săptămâna 6",
+      "shortLabel": "Săpt. 6 (Pară) • 2–6 ноя"
+    },
+    {
+      "id": "w7",
+      "type": "study",
+      "weekNumber": 7,
+      "parity": "impara",
+      "startDate": "2026-11-09",
+      "endDate": "2026-11-15",
+      "labelRo": "Săptămâna 7",
+      "shortLabel": "Săpt. 7 (Impară) • 9–13 ноя"
+    },
+    {
+      "id": "w8",
+      "type": "study",
+      "weekNumber": 8,
+      "parity": "para",
+      "startDate": "2026-11-16",
+      "endDate": "2026-11-22",
+      "labelRo": "Săptămâna 8",
+      "shortLabel": "Săpt. 8 (Pară) • 16–20 ноя"
+    },
+    {
+      "id": "w9",
+      "type": "study",
+      "weekNumber": 9,
+      "parity": "impara",
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-29",
+      "labelRo": "Săptămâna 9",
+      "shortLabel": "Săpt. 9 (Impară) • 23–27 ноя"
+    },
+    {
+      "id": "w10",
+      "type": "study",
+      "weekNumber": 10,
+      "parity": "para",
+      "startDate": "2026-11-30",
+      "endDate": "2026-12-06",
+      "labelRo": "Săptămâna 10",
+      "shortLabel": "Săpt. 10 (Pară) • 30 ноя – 4 дек 🎉"
+    },
+    {
+      "id": "w11",
+      "type": "study",
+      "weekNumber": 11,
+      "parity": "impara",
+      "startDate": "2026-12-07",
+      "endDate": "2026-12-13",
+      "labelRo": "Săptămâna 11",
+      "shortLabel": "Săpt. 11 (Impară) • 7–11 дек"
+    },
+    {
+      "id": "w12",
+      "type": "study",
+      "weekNumber": 12,
+      "parity": "para",
+      "startDate": "2026-12-14",
+      "endDate": "2026-12-18",
+      "labelRo": "Săptămâna 12",
+      "shortLabel": "Săpt. 12 (Pară) • 14–18 дек"
+    },
+    {
+      "id": "vacanta_iarna",
+      "type": "vacation",
+      "icon": "🎄",
+      "startDate": "2026-12-19",
+      "endDate": "2027-01-03",
+      "returnDate": "2027-01-04",
+      "returnLabel": "4 января 2027 (Săptămâna 13 • Impară)",
+      "labelRo": "Vacanță de iarnă",
+      "labelRu": "Зимние каникулы",
+      "durationText": "2 недели (19 дек 2026 – 3 янв 2027)",
+      "description": "Рождественские и новогодние каникулы. Счёт учебных недель ставится на паузу — после каникул начинается 13-я (нечётная) учебная неделя.",
+      "shortLabel": "🎄 Vacanță de iarnă • 19 дек – 3 янв"
+    },
+    {
+      "id": "w13",
+      "type": "study",
+      "weekNumber": 13,
+      "parity": "impara",
+      "startDate": "2027-01-04",
+      "endDate": "2027-01-10",
+      "labelRo": "Săptămâna 13",
+      "shortLabel": "Săpt. 13 (Impară) • 4–8 янв 🎉"
+    },
+    {
+      "id": "w14",
+      "type": "study",
+      "weekNumber": 14,
+      "parity": "para",
+      "startDate": "2027-01-11",
+      "endDate": "2027-01-17",
+      "labelRo": "Săptămâna 14",
+      "shortLabel": "Săpt. 14 (Pară) • 11–15 янв (Финал)"
+    },
+    {
+      "id": "sesiune_iarna",
+      "type": "exams",
+      "icon": "📝",
+      "startDate": "2027-01-18",
+      "endDate": "2027-02-07",
+      "labelRo": "Sesiune de examene",
+      "labelRu": "Зимняя экзаменационная сессия",
+      "durationText": "3 недели (18 янв – 7 фев 2027)",
+      "shortLabel": "📝 Sesiune de examene • 18 янв – 7 фев"
+    },
+    {
+      "id": "vacanta_intersemestriala",
+      "type": "vacation",
+      "icon": "❄️",
+      "startDate": "2027-02-08",
+      "endDate": "2027-02-14",
+      "returnDate": "2027-02-15",
+      "returnLabel": "15 февраля 2027 (Начало 2-го семестра)",
+      "labelRo": "Vacanță intersemestrială",
+      "labelRu": "Межсеместровые каникулы",
+      "durationText": "1 неделя (8 – 14 фев 2027)",
+      "description": "Каникулы после зимней экзаменационной сессии перед стартом 2-го семестра.",
+      "shortLabel": "❄️ Vacanță intersemestrială • 8–14 фев"
+    }
+  ],
+  "holidays": {
+    "2026-11-30": {
+      "nameRo": "Sfântul Andrei",
+      "nameRu": "День Святого Андрея Первозванного",
+      "dayRo": "Luni"
+    },
+    "2026-12-01": {
+      "nameRo": "Ziua Națională a României",
+      "nameRu": "Национальный день Румынии",
+      "dayRo": "Marți"
+    },
+    "2027-01-06": {
+      "nameRo": "Boboteaza",
+      "nameRu": "Богоявление / Крещение Господне",
+      "dayRo": "Miercuri"
+    },
+    "2027-01-07": {
+      "nameRo": "Sfântul Ioan Botezătorul",
+      "nameRu": "Собор Иоанна Предтечи",
+      "dayRo": "Joi"
+    }
+  },
+  "exams": [
+    {
+      "id": "exam-pl1",
+      "subject": "Proiectare logică I",
+      "teacher": "prof. Eugen Dumitrașcu",
+      "examType": "Examen",
+      "examTypeRu": "Экзамен",
+      "date": null,
+      "time": null,
+      "room": null,
+      "roomCode": null,
+      "statusText": "Дата уточняется в декабре"
+    },
+    {
+      "id": "exam-pclp",
+      "subject": "Programarea Calculatoarelor și Limbaje de Programare (P.C.L.P.)",
+      "teacher": "prof. Marius Marian",
+      "examType": "Examen",
+      "examTypeRu": "Экзамен",
+      "date": null,
+      "time": null,
+      "room": null,
+      "roomCode": null,
+      "statusText": "Дата уточняется в декабре"
+    },
+    {
+      "id": "exam-alg",
+      "subject": "Algebra liniară și geometrie",
+      "teacher": "prof. Florian Munteanu",
+      "examType": "Examen",
+      "examTypeRu": "Экзамен",
+      "date": null,
+      "time": null,
+      "room": null,
+      "roomCode": null,
+      "statusText": "Дата уточняется в декабре"
+    },
+    {
+      "id": "exam-fiz1",
+      "subject": "Fizica I - Elemente Generale",
+      "teacher": "prof. Silviu Săraru",
+      "examType": "Examen",
+      "examTypeRu": "Экзамен",
+      "date": null,
+      "time": null,
+      "room": null,
+      "roomCode": null,
+      "statusText": "Дата уточняется в декабре"
+    },
+    {
+      "id": "exam-am",
+      "subject": "Analiza matematică",
+      "teacher": "prof. Cristian Vladimirescu",
+      "examType": "Examen",
+      "examTypeRu": "Экзамен",
+      "date": null,
+      "time": null,
+      "room": null,
+      "roomCode": null,
+      "statusText": "Дата уточняется в декабре"
+    },
+    {
+      "id": "exam-ia",
+      "subject": "Informatică Aplicată",
+      "teacher": "prof. Ileana Nicolae",
+      "examType": "Colocviu / Examen",
+      "examTypeRu": "Зачёт / Экзамен",
+      "date": null,
+      "time": null,
+      "room": null,
+      "roomCode": null,
+      "statusText": "Дата уточняется в декабре"
+    }
+  ],
   "buildings": {
     "ACB": "Clădirea Facultății de Automatică, Calculatoare și Electronică",
     "K201": "Clădirea Facultății de Automatică, Calculatoare și Electronică",

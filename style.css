@@ -109,7 +109,7 @@ body {
 
 /* Header */
 .app-header {
-  background: rgba(17, 24, 39, 0.85);
+  background: rgba(17, 24, 39, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-subtle);
@@ -118,7 +118,7 @@ body {
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 11px;
 }
 
 .header-top {
@@ -236,7 +236,56 @@ body {
   flex-shrink: 0;
 }
 
-/* Interactive Week Navigator */
+/* Mode Switcher: Schedule vs Exams */
+.mode-switcher {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  background: rgba(9, 13, 22, 0.85);
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+}
+
+.mode-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 8px;
+  border-radius: 9px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.mode-tab:hover {
+  color: var(--text-primary);
+}
+
+.mode-tab.active {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.24), rgba(30, 41, 59, 0.95));
+  border-color: rgba(99, 102, 241, 0.48);
+  color: #ffffff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+.mode-tab[data-mode="exams"].active {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.24), rgba(30, 41, 59, 0.95));
+  border-color: rgba(245, 158, 11, 0.48);
+  color: #fef3c7;
+}
+
+/* Interactive Week / Period Navigator & Dropdown */
+.week-navigator-wrap {
+  position: relative;
+}
+
 .week-navigator {
   display: flex;
   align-items: stretch;
@@ -310,6 +359,18 @@ body {
   color: #d1fae5;
 }
 
+.week-center-badge.week-vacation {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.22), rgba(30, 41, 59, 0.92));
+  border-color: rgba(56, 189, 248, 0.5);
+  color: #e0f2fe;
+}
+
+.week-center-badge.week-exams {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.22), rgba(30, 41, 59, 0.92));
+  border-color: rgba(245, 158, 11, 0.5);
+  color: #fef3c7;
+}
+
 .week-badge-main {
   display: flex;
   align-items: center;
@@ -324,6 +385,18 @@ body {
   border-radius: 50%;
   background: currentColor;
   box-shadow: 0 0 8px currentColor;
+  flex-shrink: 0;
+}
+
+.picker-chevron {
+  width: 14px;
+  height: 14px;
+  opacity: 0.75;
+  transition: transform 0.2s ease;
+}
+
+.week-center-badge[aria-expanded="true"] .picker-chevron {
+  transform: rotate(180deg);
 }
 
 .current-week-pill {
@@ -343,6 +416,77 @@ body {
   font-weight: 500;
 }
 
+/* Period Picker Dropdown List */
+.period-picker-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  max-height: 310px;
+  overflow-y: auto;
+  background: #111827;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.75);
+  padding: 6px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.period-picker-dropdown[hidden] {
+  display: none !important;
+}
+
+.period-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 11px;
+  border-radius: 9px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.79rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.period-option:hover {
+  background: rgba(148, 163, 184, 0.1);
+  color: var(--text-primary);
+}
+
+.period-option.is-selected {
+  background: rgba(99, 102, 241, 0.22);
+  border-color: rgba(99, 102, 241, 0.45);
+  color: #ffffff;
+}
+
+.period-option.type-vacation {
+  color: #7dd3fc;
+}
+
+.period-option.type-exams {
+  color: #fcd34d;
+}
+
+.period-opt-tag {
+  font-size: 0.64rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 99px;
+  background: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+  white-space: nowrap;
+}
+
 /* Subgroup Switcher (Subgrupa A / Subgrupa B) */
 .subgroup-switcher {
   display: grid;
@@ -354,13 +498,19 @@ body {
   border: 1px solid var(--border-subtle);
 }
 
+.subgroup-switcher[hidden],
+.day-nav[hidden],
+.type-legend[hidden] {
+  display: none !important;
+}
+
 .subgroup-tab {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 7px;
-  padding: 9px 10px;
+  padding: 8px 10px;
   border: 1px solid transparent;
   border-radius: 10px;
   background: transparent;
@@ -390,12 +540,12 @@ body {
 }
 
 .subgroup-tab-title {
-  font-size: 0.86rem;
+  font-size: 0.85rem;
   font-weight: 700;
 }
 
 .subgroup-tab-sub {
-  font-size: 0.73rem;
+  font-size: 0.72rem;
   opacity: 0.8;
 }
 
@@ -435,6 +585,10 @@ body {
   transform: translateY(-1px);
 }
 
+.day-btn.is-holiday {
+  border-color: rgba(244, 63, 94, 0.4);
+}
+
 .day-btn-ro {
   font-size: 0.8rem;
   font-weight: 700;
@@ -454,9 +608,12 @@ body {
 
 .day-btn-dots {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 3px;
   margin-top: 5px;
-  height: 4px;
+  height: 6px;
+  font-size: 0.62rem;
 }
 
 .day-mini-dot {
@@ -487,7 +644,7 @@ body {
   box-shadow: 0 0 8px #ffffff;
 }
 
-/* Context Banner (Weekend notice or preview mode notice) */
+/* Context Banner */
 .context-banner {
   display: flex;
   align-items: center;
@@ -689,6 +846,176 @@ body {
   border-color: rgba(34, 197, 94, 0.65);
   box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.3), 0 12px 32px -6px rgba(34, 197, 94, 0.22);
   background: linear-gradient(165deg, rgba(22, 38, 46, 0.94) 0%, rgba(17, 24, 39, 0.95) 100%);
+}
+
+/* Holiday Banner Card (Zi liberă legală) */
+.holiday-card {
+  position: relative;
+  background: linear-gradient(145deg, rgba(88, 28, 135, 0.28) 0%, rgba(30, 41, 59, 0.9) 100%);
+  border: 1px solid rgba(192, 132, 252, 0.42);
+  border-radius: var(--radius-xl);
+  padding: 22px 20px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  animation: cardAppear 0.24s ease both;
+}
+
+.holiday-emoji {
+  font-size: 2.3rem;
+  line-height: 1;
+}
+
+.holiday-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 99px;
+  background: rgba(192, 132, 252, 0.18);
+  border: 1px solid rgba(192, 132, 252, 0.4);
+  color: #e9d5ff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.holiday-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.holiday-subtitle {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.holiday-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  max-width: 420px;
+}
+
+/* Vacation Card (Vacanță de iarnă / intersemestrială) */
+.vacation-card {
+  background: linear-gradient(145deg, rgba(14, 165, 233, 0.2) 0%, rgba(17, 24, 39, 0.92) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.42);
+  border-radius: var(--radius-xl);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  animation: cardAppear 0.24s ease both;
+}
+
+.vacation-icon {
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+.vacation-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.vacation-dates-pill {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 99px;
+  background: rgba(56, 189, 248, 0.16);
+  border: 1px solid rgba(56, 189, 248, 0.38);
+  color: #bae6fd;
+}
+
+.vacation-desc {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  max-width: 440px;
+  line-height: 1.5;
+}
+
+.vacation-countdown-box {
+  width: 100%;
+  margin-top: 4px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: rgba(15, 23, 42, 0.78);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.vacation-countdown-main {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.vacation-return-sub {
+  font-size: 0.77rem;
+  color: var(--text-muted);
+}
+
+/* Exam Cards (Sesiune de examene) */
+.exams-intro-banner {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.16), rgba(30, 41, 59, 0.85));
+  border: 1px solid rgba(245, 158, 11, 0.38);
+  border-radius: var(--radius-lg);
+  padding: 13px 16px;
+  font-size: 0.8rem;
+  color: #fde68a;
+  line-height: 1.45;
+}
+
+.exam-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 15px 16px 15px 20px;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  animation: cardAppear 0.22s ease both;
+}
+
+.exam-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  background: linear-gradient(180deg, #fbbf24 0%, #d97706 100%);
+}
+
+.exam-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: rgba(245, 158, 11, 0.14);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #fcd34d;
+}
+
+.exam-status-pill.is-scheduled {
+  background: rgba(16, 185, 129, 0.16);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #6ee7b7;
 }
 
 /* Top Row of Card: Time + Slot + Type Badge */
@@ -1060,5 +1387,8 @@ details[open] .chevron-svg {
   }
   .time-range {
     font-size: 0.86rem;
+  }
+  .mode-tab {
+    font-size: 0.71rem;
   }
 }

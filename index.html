@@ -57,32 +57,73 @@
         </button>
       </div>
 
-      <!-- Interactive Academic Week Navigator -->
-      <div class="week-navigator" aria-label="Навигация по учебным неделям">
-        <button type="button" class="week-nav-btn" id="prevWeekBtn" title="Предыдущая неделя" aria-label="Предыдущая неделя">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
+      <!-- Mode Switcher: Schedule vs Exam Session -->
+      <div class="mode-switcher" role="tablist" aria-label="Раздел приложения">
+        <button
+          type="button"
+          role="tab"
+          class="mode-tab active"
+          id="tabModeSchedule"
+          data-mode="schedule"
+          aria-selected="true"
+        >
+          <span>📅 Расписание (Недели 1–14)</span>
         </button>
-
-        <button type="button" class="week-center-badge" id="currentWeekBadge" title="Нажмите, чтобы быстро переключить Чётную / Нечётную неделю">
-          <div class="week-badge-main">
-            <span class="status-dot"></span>
-            <span id="currentWeekBadgeText">Săptămâna — • —</span>
-            <span class="current-week-pill" id="currentWeekNowTag" hidden>текущая</span>
-          </div>
-          <span class="week-date-range" id="weekDateRangeText">—</span>
-        </button>
-
-        <button type="button" class="week-nav-btn" id="nextWeekBtn" title="Следующая неделя" aria-label="Следующая неделя">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
+        <button
+          type="button"
+          role="tab"
+          class="mode-tab"
+          id="tabModeExams"
+          data-mode="exams"
+          aria-selected="false"
+        >
+          <span>📝 Examene / Сессия (18 янв – 7 фев)</span>
         </button>
       </div>
 
+      <!-- Interactive Academic Week / Period Navigator -->
+      <div class="week-navigator-wrap" id="weekNavigatorWrap">
+        <div class="week-navigator" aria-label="Навигация по учебному календарю">
+          <button type="button" class="week-nav-btn" id="prevWeekBtn" title="Предыдущий период / неделя" aria-label="Предыдущий период">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="week-center-badge"
+            id="currentWeekBadge"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            title="Нажмите, чтобы выбрать неделю, каникулы или сессию из списка"
+          >
+            <div class="week-badge-main">
+              <span class="status-dot" id="weekStatusDot"></span>
+              <span id="currentWeekBadgeText">Săptămâna — • —</span>
+              <span class="current-week-pill" id="currentWeekNowTag" hidden>сейчас</span>
+              <svg class="picker-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+            <span class="week-date-range" id="weekDateRangeText">—</span>
+          </button>
+
+          <button type="button" class="week-nav-btn" id="nextWeekBtn" title="Следующий период / неделя" aria-label="Следующий период">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Dropdown Menu of All Semester Weeks & Periods -->
+        <div class="period-picker-dropdown" id="periodPickerDropdown" role="listbox" hidden>
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+
       <!-- Subgroup Switcher (Subgrupa A / Subgrupa B) -->
-      <div class="subgroup-switcher" role="tablist" aria-label="Выбор подгруппы">
+      <div class="subgroup-switcher" id="subgroupSwitcher" role="tablist" aria-label="Выбор подгруппы">
         <button
           type="button"
           role="tab"
@@ -113,15 +154,15 @@
       </nav>
     </header>
 
-    <!-- Weekend / Preview Notice Banner -->
+    <!-- Context Banner (Weekend notice or preview mode notice) -->
     <div class="context-banner" id="contextBanner" hidden>
       <span class="context-banner-icon" id="contextBannerIcon">ℹ️</span>
       <span class="context-banner-text" id="contextBannerText"></span>
     </div>
 
-    <!-- Main Schedule Content -->
+    <!-- Main Schedule / Vacation / Exams Content -->
     <main class="schedule-main">
-      <!-- Day Header Info -->
+      <!-- Day / Section Header Info -->
       <div class="day-overview" id="dayOverview">
         <div class="day-overview-left">
           <h2 class="selected-day-title" id="selectedDayTitle">Luni</h2>
@@ -132,8 +173,8 @@
         </div>
       </div>
 
-      <!-- Legend for Class Types -->
-      <div class="type-legend" aria-label="Типы занятий">
+      <!-- Legend for Class Types (shown during study weeks) -->
+      <div class="type-legend" id="typeLegend" aria-label="Типы занятий">
         <span class="legend-item legend-curs"><i class="legend-dot"></i>Curs (Лекция)</span>
         <span class="legend-item legend-seminar"><i class="legend-dot"></i>Seminar (Семинар)</span>
         <span class="legend-item legend-lab"><i class="legend-dot"></i>Laborator (Лаб.)</span>
@@ -204,7 +245,7 @@
       <div class="footer-meta">
         <span id="footerGroupLabel">Grupa CR1.3 • Subgrupa A</span>
         <span>•</span>
-        <span>Семестр с 28.09.2026</span>
+        <span>Семестр I (2026–2027)</span>
       </div>
     </footer>
   </div>
